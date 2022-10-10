@@ -1,0 +1,66 @@
+{
+    "name": "@daavllc/amucretion",
+    "productName": "Amucretion",
+    "description": "An accretion of amusing, interactive content",
+    "version": "0.0.1",
+    "license": "MIT",
+    "author": {
+        "name": "DAAV, LLC",
+        "email": "contact@daav.us"
+    },
+    "copyright": "Copyright ©2022 DAAV, LLC",
+    "private": true,
+    "scripts": {
+        "format": "p() { prettier ${@:- --check} '**/*.{css,js,json,md,ts,tsx}'; }; p",
+        "format-fix": "p() { prettier ${@:- --write} '**/*.{css,js,json,md,ts,tsx}'; }; p",
+        "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+        "lint-fix": "npm run lint -- --fix",
+        "clean": "npm run format-fix && npm run lint-fix",
+        "dev:generate": "npm run dev:build:esbuild && npm run dev:build:webpack",
+        "rel:generate": "npm run rel:build:esbuild && npm run rel:build:webpack",
+        "dev:build:esbuild": "node scripts/esbuild.js",
+        "rel:build:esbuild": "npm run dev:build:esbuild -- --prod",
+        "dev:build:webpack": "npx webpack --config ./scripts/webpack.dev.config.js",
+        "rel:build:webpack": "npx webpack --config ./scripts/webpack.rel.config.js",
+        "dev:build:babel": "npx babel --watch src --out-dir dist --presets react-app/prod",
+        "check:types": "tsc --noEmit"
+    },
+    "keywords": [],
+    "dependencies": {
+        "@types/node": "^18.8.3",
+        "@types/react-dom": "^18.0.6",
+        "babel-cli": "^6.26.0",
+        "babel-preset-react-app": "^10.0.1",
+        "esbuild": "^0.15.10",
+        "jsx": "^0.9.89",
+        "minify": "^9.1.0",
+        "moment": "^2.29.4",
+        "ts-loader": "^9.4.1",
+        "tsx": "^3.10.1"
+    },
+    "devDependencies": {
+        "@types/react": "^18.0.21",
+        "@typescript-eslint/eslint-plugin": "^5.39.0",
+        "css-loader": "^6.7.1",
+        "eslint": "^8.25.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-header": "^3.1.1",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-more": "^1.0.5",
+        "eslint-plugin-react": "^7.31.9",
+        "html-webpack-plugin": "^5.5.0",
+        "mini-css-extract-plugin": "^2.6.1",
+        "prettier": "^2.7.1",
+        "react": "^18.2.0",
+        "react-dev-tools": "^0.0.1",
+        "react-dom": "^18.2.0",
+        "terser-webpack-plugin": "^5.3.6",
+        "tslint-config-prettier": "^1.18.0",
+        "typescript": "^4.8.4",
+        "webpack": "^5.74.0",
+        "webpack-cli": "^4.10.0"
+    },
+    "files": [
+        "./dist/Amucretion/js/**/*"
+    ]
+}

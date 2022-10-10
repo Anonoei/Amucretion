@@ -1,0 +1,11 @@
+build/
+dist/
+assets/
+scripts/
+
+src/games.js
+
+# Control files
+.eslintrc.js
+.prettierrc.js
+webpack.config.js

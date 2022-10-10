@@ -1,0 +1,132 @@
+:root {
+    --Amucretion_background: #000000;
+    --Amucretion_background1: #111111;
+    --Amucretion_foreground: #ffffff;
+    --Amucretion_foreground1: #00ba6c;
+    --Amucretion_separator: #444444;
+    --Amucretion_separator1: #888888;
+    --Amucretion_font-family: "Roboto Mono", sans-serif;
+    --Amucretion_font-size: 12px;
+    --Amucretion_font-style: normal;
+    --Amucretion_font-weight: 100;
+    --Amucretion_letter-spacing: 1px;
+}
+
+/* Amucretion style */
+html {
+    background: var(--Amucretion_background);
+    color: var(--Amucretion_foreground);
+    font-family: var(--Amucretion_font-family);
+    letter-spacing: var(--Amucretion_letter-spacing);
+}
+body {
+    width: auto;
+    height: auto;
+    margin: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    color: var(--Amucretion_foreground);
+    font-family: var(--Amucretion_font-family);
+    letter-spacing: var(--Amucretion_letter-spacing);
+}
+
+select,
+button {
+    background: var(--Amucretion_background);
+    color: var(--Amucretion_foreground);
+    font-family: var(--Amucretion_font-family);
+    font-size: var(--Amucretion_font-size);
+    letter-spacing: var(--Amucretion_letter-spacing);
+    border: 1px solid var(--Amucretion_separator);
+}
+
+input,
+textarea {
+    background: var(--Amucretion_background);
+    color: var(--Amucretion_foreground);
+    font-family: var(--Amucretion_font-family);
+    font-size: var(--Amucretion_font-size);
+    letter-spacing: var(--Amucretion_letter-spacing);
+    border: 0px;
+}
+
+textarea {
+    resize: none;
+    text-shadow: none;
+}
+:focus {
+    outline: none;
+}
+
+#Amucretion {
+    overflow: hidden;
+    width: auto;
+    height: 100vh;
+    padding: 0px;
+    margin: 0px;
+}
+
+#containerAmucretion {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    width: auto;
+    height: 100vh;
+    padding: 1px;
+    margin: 0px;
+}
+
+#containerTitle {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+    height: 41px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: white;
+}
+#containerBody {
+    display: flex;
+    flex: 1;
+    overflow: auto;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+    height: auto;
+}
+#containerFooter {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+    height: 41px;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: white;
+}
+#containerTitle_Logo,
+#containerTitle_Name,
+#containerTitle_Version,
+#containerTitle_Tagline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    height: 100%;
+}
+#containerTitle_Tagline,
+#containerFooter_Copyright {
+    padding-left: 20px;
+    font-size: 12px;
+}

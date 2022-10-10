@@ -1,0 +1,131 @@
+#container2048 {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+}
+
+#Stats2048,
+#Settings2048,
+#Header2048 {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    position: relative;
+}
+.HeaderColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+}
+.HeaderItem {
+    display: flex;
+    align-items: center;
+}
+
+#Body2048 {
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 10px;
+}
+
+#BoardWrap {
+    position: relative;
+    width: 70vh;
+}
+#BoardWrap:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+#Board {
+    display: inline-flex;
+    position: absolute;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%
+}
+.BoardRow {
+    justify-content: center;
+    position: relative;
+    display: inline-flex;
+    padding: 0px;
+    margin: 0px;
+}
+.BoardCell {
+    justify-content: center;
+    position: relative;
+    border: 1px solid var(--Amucretion_separator1);
+}
+.BoardBlock {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-family: var(--Amucretion_font-family);
+    letter-spacing: var(--Amucretion_letter-spacing);
+    font-size: var(--Amucretion_font-size);
+    background: #111111;
+}
+
+.BoardBlockValBlank {
+    background: #111111;
+    color: #ffffff;
+}
+.BoardBlockVal2 {
+    background: #aaaaff;
+    color: #000000;
+}
+.BoardBlockVal4 {
+    background: #7777cc;
+    color: #000000;
+}
+.BoardBlockVal8 {
+    background: #333399;
+    color: #ffffff;
+}
+.BoardBlockVal16 {
+    background: #0000cc;
+    color: #ffffff;
+}
+.BoardBlockVal32 {
+    background: #aaffaa;
+    color: #000000;
+}
+.BoardBlockVal64 {
+    background: #77cc77;
+    color: #000000;
+}
+.BoardBlockVal128 {
+    background: #339933;
+    color: #000000;
+}
+.BoardBlockVal256 {
+    background: #00cc00;
+    color: #000000;
+}
+.BoardBlockVal512 {
+    background: #ffaaaa;
+    color: #000000;
+}
+.BoardBlockVal1024 {
+    background: #cc7777;
+    color: #000000;
+}
+.BoardBlockVal2048 {
+    background: #993333;
+    color: #000000;
+}
+.BoardBlockVal4096 {
+    background: #cc0000;
+    color: #000000;
+}
