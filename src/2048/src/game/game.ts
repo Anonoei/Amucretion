@@ -1,7 +1,7 @@
 /*
  Copyright 2022 DAAV, LLC
  Licensed under the MIT license. See LICENSE for details.
- */
+*/
 import {Game} from "../../../library/src/game";
 
 import {Action} from "./action";

@@ -8,7 +8,7 @@ import {UI2048} from "./ui";
 
 window.onload = function () {
     const ac = new Amucretion();
-    const ui = new UI2048("2048", "0.4.0", ac)
+    const ui = new UI2048("2048", "0.4.0", ac);
     ac.Initialize(ui, "2048");
     ac.Render();
 };

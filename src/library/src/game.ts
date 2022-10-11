@@ -10,7 +10,7 @@ export class Game {
     protected readonly name: string = "undefined";
     protected readonly version: string = "undefined";
     protected readonly log: Logger;
-    protected refresh: CallableFunction = function(){};
+    protected refresh: CallableFunction = function () {};
 
     public constructor(
         name: string,
@@ -21,7 +21,7 @@ export class Game {
         this.name = name;
         this.version = version;
         this.log = new Logger(`Amucretion.${this.name}.Game`, level);
-        this.refresh = function() {
+        this.refresh = function () {
             ui.Refresh();
         }.bind(ui);
     }

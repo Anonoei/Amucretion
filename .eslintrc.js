@@ -41,6 +41,7 @@ const rules = {
     "lines-between-class-members": "off",
     "class-methods-use-this": "off",
     "no-useless-escape": "off",
+    "no-empty": "off",
 };
 
 const typescriptRules = {
@@ -48,6 +49,7 @@ const typescriptRules = {
     "@typescript-eslint/no-empty-function": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/adjacent-overload-signatures": "off",
+    "@typescript-eslint/ban-types": "off",
     "@typescript-eslint/brace-style": [
         "error",
         "1tbs",

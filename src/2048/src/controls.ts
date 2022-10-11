@@ -6,7 +6,7 @@ import {Controls} from "../../library/src/controls";
 
 import {Pos} from "../../library/src/size";
 
-import {Game2048} from "./game/game"
+import {Game2048} from "./game/game";
 import {Action} from "./game/action";
 
 export class GameControls extends Controls {
@@ -26,8 +26,8 @@ export class GameControls extends Controls {
         };
         this.mouseUpHandler = function (e: any) {
             if (this.mousePos == null) return;
-            this.SubmitAction(
-                this.CalcAction(
+            Controls2048.SubmitAction(
+                Controls2048.CalcAction(
                     e.clientX - this.mousePos.X,
                     e.clientY - this.mousePos.Y,
                     20,
@@ -38,12 +38,11 @@ export class GameControls extends Controls {
         };
         this.touchStartHandler = function (e: any) {
             this.touchPos = new Pos(e.touches[0].clientX, e.touches[0].clientY);
-            console.log(e);
         };
         this.touchMoveHandler = function (e: any) {
             if (this.touchPos == null) return;
-            this.SubmitAction(
-                this.CalcAction(
+            Controls2048.SubmitAction(
+                Controls2048.CalcAction(
                     this.touchPos.X - e.touches[0].clientX,
                     this.touchPos.Y - e.touches[0].clientY,
                     0,
@@ -61,7 +60,7 @@ export class GameControls extends Controls {
                 Controls2048.SubmitAction(Action.Down);
             else if (e.key == "a" || e.key == "ArrowLeft")
                 Controls2048.SubmitAction(Action.Left);
-            else if (e.key == "d" || e.key == "arrowRight")
+            else if (e.key == "d" || e.key == "ArrowRight")
                 Controls2048.SubmitAction(Action.Right);
             else if (e.key == "z" && e.ctrlKey)
                 Controls2048.SubmitAction(Action.Undo);
@@ -69,7 +68,7 @@ export class GameControls extends Controls {
                 (e.key == "y" && e.ctrlKey) ||
                 (e.key == "z" && e.shiftKey)
             )
-            Controls2048.SubmitAction(Action.Redo);
+                Controls2048.SubmitAction(Action.Redo);
         };
     }
 
@@ -77,16 +76,22 @@ export class GameControls extends Controls {
         game: Game2048,
         enableKeys = true,
         enableMouse = true,
-        enableTouch = true,
+        enableTouch = true
     ) {
         super.Initialize(game, enableKeys, enableMouse, enableTouch);
-        this.callback = function(action: Action) {
+        this.callback = function (action: Action) {
             game.Flow(action);
         }.bind(game);
         if (this.enableKeys)
             document.addEventListener("keydown", this.keyDownHandler, false);
-        if (this.enableMouse)
-            document.addEventListener("mousedown", this.mouseDownHandler, false);
+        if (this.enableMouse) {
+            document.addEventListener(
+                "mousedown",
+                this.mouseDownHandler,
+                false
+            );
+            document.addEventListener("mouseup", this.mouseUpHandler, false);
+        }
         if (this.enableTouch) {
             document.addEventListener(
                 "touchstart",
@@ -101,12 +106,7 @@ export class GameControls extends Controls {
         }
     }
 
-    private CalcAction(
-        dX: number,
-        dY: number,
-        valX: number,
-        valY: number
-    ) {
+    private CalcAction(dX: number, dY: number, valX: number, valY: number) {
         if (Math.abs(dX) > Math.abs(dY)) {
             if (dX < -valX) return Action.Left;
             else if (dX > valX) return Action.Right;

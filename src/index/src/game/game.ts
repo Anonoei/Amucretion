@@ -5,20 +5,14 @@
 import {Game} from "../../../library/src/game";
 
 export class GameIndex extends Game {
-    protected games: Array<string> = [
-        "2048", "4096"
-    ]
+    protected games: Array<string> = ["2048", "4096"];
     public constructor(name: string, version: string, ui: any) {
         super(name, version, ui);
     }
 
-    public override Initialize() {
+    public override Initialize() {}
 
-    }
-
-    public override Shutdown() {
-        
-    }
+    public override Shutdown() {}
 }
 /*
 class Index

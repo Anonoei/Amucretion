@@ -7,7 +7,7 @@ import {UI4096} from "./ui";
 
 window.onload = function () {
     const ac = new Amucretion();
-    const ui = new UI4096("4096", "0.4.0", ac)
+    const ui = new UI4096("4096", "0.4.0", ac);
     ac.Initialize(ui, "4096");
     ac.Render();
 };

@@ -9,7 +9,7 @@ export class Controls {
     protected enableKeys = true;
     protected enableMouse = true;
     protected enableTouch = true;
-    protected callback: CallableFunction = function(){};
+    protected callback: CallableFunction = function () {};
 
     public Initialize(
         game: Game,

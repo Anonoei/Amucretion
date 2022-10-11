@@ -7,7 +7,7 @@ import {UIIndex} from "./ui";
 
 window.onload = function () {
     const ac = new Amucretion();
-    const ui = new UIIndex("Index", "0.2.0", ac)
+    const ui = new UIIndex("Index", "0.2.0", ac);
     ac.Initialize(ui, "Index");
     ac.Render();
 };

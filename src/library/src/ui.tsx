@@ -15,20 +15,20 @@ export class UI {
     protected readonly version: string = "undefined";
     protected readonly log: Logger;
 
-    protected render: CallableFunction = function(){};
+    protected render: CallableFunction = function () {};
     protected game: Game = new Game(this.name, this.version, this);
-    protected controls: Controls  = new Controls();
+    protected controls: Controls = new Controls();
 
     public constructor(
         name: string,
         version: string,
         ac: any,
-        level: LogLevel = LogLevel.Trace,
+        level: LogLevel = LogLevel.Trace
     ) {
         this.name = name;
         this.version = version;
         this.log = new Logger(`Amucretion.${this.name}.UI`, level);
-        this.render = function() {
+        this.render = function () {
             ac.Render();
         }.bind(ac);
     }
@@ -47,8 +47,14 @@ export class UI {
         this.Refresh();
         this.controls.Initialize(this.game);
     }
-    public Runtime() {{this.render(this.Render())}}
-    public Render(): JSX.Element {return <p>undefined</p>}
+    public Runtime() {
+        {
+            this.render(this.Render());
+        }
+    }
+    public Render(): JSX.Element {
+        return <p>undefined</p>;
+    }
     public Shutdown() {
         this.log.trace("Shutting down...");
     }

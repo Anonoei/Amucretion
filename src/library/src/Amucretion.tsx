@@ -9,17 +9,17 @@ import {Logger, LogLevel} from "./logger";
 import {UI} from "./ui";
 
 export class Amucretion {
-    private version: string = "0.2.0";
+    private version = "0.2.0";
     private log: Logger = new Logger("Amucretion", LogLevel.Trace);
     private readonly root: ReactDOM.Root = ReactDOM.createRoot(
         document.getElementById("Amucretion") as HTMLElement
     );
-    
+
     public ui: UI = new UI("undefined", "undefined", this);
     private isMobile = false;
-    private file: string = "/indexT.html";
+    private file = "/indexT.html";
     private url: string = location.origin;
-    private path: string = "";
+    private path = "";
 
     public constructor() {
         if (
@@ -127,9 +127,7 @@ export class Amucretion {
     }
 
     private Body(props: any): JSX.Element {
-        return (
-            <div id="containerBody">{props.game}</div>
-        );
+        return <div id="containerBody">{props.game}</div>;
     }
 
     public SizeHook() {} // Defined in Amucretion application

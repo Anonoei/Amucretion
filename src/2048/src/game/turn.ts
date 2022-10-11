@@ -2,7 +2,7 @@
  Copyright 2022 DAAV, LLC
  Licensed under the MIT license. See LICENSE for details.
 */
-import {Dictionary} from "../../library/src/types";
+import {Dictionary} from "../../../library/src/types";
 
 import {Action} from "./action";
 

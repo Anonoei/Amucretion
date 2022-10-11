@@ -1,3 +1,7 @@
+/*
+ Copyright 2022 DAAV, LLC
+ Licensed under the MIT license. See LICENSE for details.
+*/
 import * as React from "react";
 
 export class FooterComponent extends React.Component<{}> {
