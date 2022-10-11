@@ -45,8 +45,8 @@ export class GameControls extends Controls {
                 Controls2048.CalcAction(
                     this.touchPos.X - e.touches[0].clientX,
                     this.touchPos.Y - e.touches[0].clientY,
-                    0,
-                    0
+                    -10,
+                    -10
                 )
             );
             this.touchPos = null;
