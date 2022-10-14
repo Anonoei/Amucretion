@@ -4,3 +4,6 @@ build/
 
 # Editors
 .vscode/
+
+# Mac
+.DS_Store

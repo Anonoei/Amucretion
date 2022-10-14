@@ -16,8 +16,8 @@ module.exports = {
         minimizer: [new TerserPlugin({})],
     },
     output: {
-        path: path.join(DST_DIR, "js"),
-        filename: "[name].bundle.js",
+        path: path.join(DST_DIR),
+        filename: path.join("[name]", "[name].bundle.js"),
     },
     target: "web",
 };

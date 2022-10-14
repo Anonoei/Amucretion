@@ -16,14 +16,22 @@ An accretion of amusing, interactive content
 -   Dependencies:
     -   [node](https://nodejs.org/en/download/) (see package.json for additional dependencies)
 
+# Table of Contents
+ - [ ] [2048](https://daavllc.github.com/Amucretion/dist/2048)
+ - [ ] [4096](https://daavllc.github.com/Amucretion/dist/4096)
+
 # Development status/roadmap <span id="amucretion-development">
 
 -   [ ] Mobile support
 -   [ ] Games
-    -   [x] [2048](https://daavllc.github.io/Amucretion//dist/html/2048.html)
+    -   [x] [2048](https://github.com/daavllc/Amucretion/src/2048)
         -   [ ] Initial release
-    -   [x] [4096](https://daavllc.github.io/Amucretion//dist/html/4096.html)
+        -   [X] Development build
+        -   [X] Begin development
+    -   [x] [4096](https://github.com/daavllc/Amucretion/src/4096)
         -   [ ] Initial release
+        -   [X] Development build
+        -   [X] Begin development
 
 # Using Amucretion <span id="using-amucretion"></span>
 
@@ -32,7 +40,7 @@ An accretion of amusing, interactive content
 # Contributing to Amucretion <span id="contribute-amucretion"></span>
 
 1.  Install required software
-    1. [node](https://nodejs.org/en/download/)
+    - [node](https://nodejs.org/en/download/)
 2.  Download from source
     -   Using Git: Run `git clone --recursive https://github.com/daavllc/Amucretion.git`
     -   Download from GitHub:
